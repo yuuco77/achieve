@@ -4,21 +4,25 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
+    #raise
     @blogs = Blog.all
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    #raise
   end
 
   # GET /blogs/new
   def new
+    #raise
     @blog = Blog.new
   end
 
   # GET /blogs/1/edit
   def edit
+    #raise
   end
 
   # POST /blogs
@@ -27,7 +31,9 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
 
     respond_to do |format|
+      #raise
       if @blog.save
+        #raise
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
         format.json { render :show, status: :created, location: @blog }
       else
@@ -40,8 +46,11 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1
   # PATCH/PUT /blogs/1.json
   def update
+    #raise
     respond_to do |format|
+
       if @blog.update(blog_params)
+        #raise
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog }
       else
@@ -54,7 +63,9 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1
   # DELETE /blogs/1.json
   def destroy
+    #raise
     @blog.destroy
+    #raise
     respond_to do |format|
       format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
       format.json { head :no_content }
